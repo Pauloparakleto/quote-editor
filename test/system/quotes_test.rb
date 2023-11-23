@@ -26,6 +26,19 @@ class QuotesTest < ApplicationSystemTestCase
     assert_text "Capybara quote"
   end
 
+  test "Canceling a new quote" do
+    visit quotes_path
+    assert_no_selector "a", text: "Cancel"
+
+    click_on "New quote"
+    fill_in "Name", with: "Capybara quote"
+
+    assert_selector "a", text: "Cancel"
+    click_on "Cancel"
+
+    assert_no_selector "a", text: "Cancel"
+  end
+
   test "Updating a quote" do
     visit quotes_path
     assert_selector "h1", text: "Quotes"
