@@ -5,3 +5,7 @@ user:passwords
 user:passwords
 user:passwords
 user:passwords
+user:passwords-updates
+user:passwords-updates
+user:passwords-updates
+user:passwords-updates
